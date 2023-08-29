@@ -1,2 +1,146 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shecodes</title>
+</head>
+<style>
+    div{
+        text-align: center;
+    }
+    .place{
+        color:#1A64D6 ;
+        font-size: 40px;
+        margin: auto;
+    }
+    .degrees{
+        font-weight: lighter;
+        font-size: 40px;
+        margin: auto;
+    }
+    ul{
+        padding: 0%;
+       
+    }
+    li{
+        padding: 10px 0;
+        border-radius: 10px;
+        margin: 0 auto;
+        transition: all 200ms ease-in-out;
+        text-align: center;
+        list-style: none;
+        max-width: 400px;
+        
+    }
+    li:hover{
+        background-color:#FFFBEF;
+    }
+    
+    .tomorrow{
+        font-weight: lighter;
+        font-size: 17px;
+        font-family: monospace;
+    }
+    .saturday{
+        font-weight: lighter;
+        font-size: 17px;
+        font-family: monospace;
+    }
+    .sunday{
+    font-weight: lighter;
+        font-size: 17px;
+        font-family: monospace;
+
+    }
+    button {
+  padding: 20px 30px;
+  color: white;
+  display: block;
+  margin: 0 auto 30px auto;
+  text-decoration: none;
+  font-size: 18px;
+  background:#3574D9 ;
+  border: 1px solid #3574D9;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 150ms ease-in-out;
+}
+
+button:hover {
+  color:#3574D9 ;
+  background-color: white;
+}
+.name{
+    font-family: monospace;
+    font-size: 18x;
+    text-align: center;
+}
+    
+</style>
+<body>
+    <div>
+        <h1 class="place">
+           🌤️
+           <br>
+           Currently 21° in Tokyo
+        </h1>
+        <h2 class="degrees"> 13/
+            <strong>23°</strong>
+        </h2>
+        <ul>
+<li class="first">
+<h3>🌧️ Tomorrow
+    <br>
+    <h4 class="tomorrow">
+        10° /
+        <strong>22°</strong>
+    </h4>
+  </li>
+            <li class="second">
+                <h3>
+                    🌥️ Saturday
+                    <br>
+                    <h4 class="saturday">15°/
+                        <strong>17°</strong>
+                    </h4>
+                </h3>
+            </li>
+            <li class="third">
+                <h3>
+                    ☀️ Sunday
+                    <br>
+                    <h4 class="sunday">25°/
+                        <strong>28°</strong>
+                    </h4>
+                </h3>
+            </li>
+          </ul>
+        <button>
+            Change city
+        </button>
+        <div class="name">
+            coded by FK Maswanganyi
+        </div>
+
+    </div>
+    <script>
+        function changeCity(){
+          let city = prompt("What city do you live in?");
+          let temperature = prompt ("What temperature is it?");
+          let heading = document.querySelector("h1");
+          if (temperature < 0){
+            heading.innerHTML = "🥶<br />Currently" + " " + temperature + " " + "°C in" + " " + city;
+          }
+          else{
+            heading.innerHTML =  "😁<br />Currently" + " " + temperature + " " + "°C in" + " " + city;
+          }
+        }
+        let ChangeButton = document.querySelector("button");
+        ChangeButton.addEventListener("click", changeCity);
+
+    </script>
+</body>
+</html>
